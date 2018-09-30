@@ -10,7 +10,9 @@ public class Teszteles {
 	private Account acc2;
 	private AccountRegister ar;
 	private PlaceRegister pr;
-	private CommentRegister cr;	
+	private CommentRegister cr;
+	private Account acc3;
+	private Account acc4;
 	
 	@Before
 	public void acc() {
@@ -19,6 +21,7 @@ public class Teszteles {
 		ar = new AccountRegister();
 		pr = new PlaceRegister();
 		cr = new CommentRegister();
+		acc3 = new Account();
 	}
 	
 	@Test
@@ -62,14 +65,21 @@ public class Teszteles {
 	public void testCommentRegister() {
 		cr.load("Nem létezõ");
 		cr.load("Comments");
-		
 	}
 	
+	@Test
+	public void testAccount3() {
+		acc3.setTipus(AccType.TULAJDONOS);
+		
+		Assert.assertEquals(acc3.getTipus(), AccType.TULAJDONOS);
+		Assert.assertEquals(acc3.getTipus().toString(), "Tulajdonos");
+	}
 	
-	
-	
-	
-	
-
+	@Test
+	public void testAccount4() {
+		acc4 = new Account("felhasznalonevem", "ezmegajleszo");
+		Assert.assertEquals(acc4.getFelhaszn(), "felhasznalonevem");
+		Assert.assertEquals(acc4.getJlsz(), "ezmegajleszo");
+	}
 }
 
