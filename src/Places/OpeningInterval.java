@@ -5,7 +5,7 @@ public class OpeningInterval {
 	private MyTime from;
 	private MyTime to;
 	
-	public boolean isOpen() {
+	public boolean getOpen() {
 		return isOpen;
 	}
 	public void setOpen(boolean isOpen) {
