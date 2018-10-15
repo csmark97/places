@@ -13,6 +13,8 @@ public class Teszteles {
 	private CommentRegister cr;
 	private Account acc3;
 	private Account acc4;
+	private Account acc5;
+
 	
 	@Before
 	public void acc() {
@@ -22,6 +24,8 @@ public class Teszteles {
 		pr = new PlaceRegister();
 		cr = new CommentRegister();
 		acc3 = new Account();
+		acc5 = new Account();;
+
 	}
 	
 	@Test
